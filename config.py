@@ -9,3 +9,4 @@ class Config:
     data_dir = {'default': str(Path(basedir, 'data'))}
 
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
+    azure_url = 'https://flaskfolium.azurewebsites.net'
