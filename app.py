@@ -42,7 +42,7 @@ def make_map():
         address = form.address.data
         loc, lstr = GeoTest.get_single_location(addr=address)
         map_fn = mapname + '.html'
-        mfile = GeoTest.get_folium_map(loc,map_fn)
+        mfile = GeoTest.make_folium_map(loc,map_fn)
         return redirect(url_for('folium_single_map', name=mapname))
     return render_template('create_map.html', form=form)
 
